@@ -12,6 +12,7 @@ from sys import exit
 import urllib.request
 import dotenv
 import telegram.ext as tg
+from subprocess import Popen, run, check_output
 
 from pyrogram import Client
 
@@ -56,7 +57,12 @@ TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5598608491:AAEXTmmdkQbe4Av1EPB1ex
 # Get these values from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", 6805787))
 API_HASH = os.environ.get("API_HASH")
-
+run(["pip", "install", "hachoir"])
+run(["pip", "install", "hurry.filesize"])
+run(["pip", "install", "natsort"])
+run(["pip", "install", "pytz"])
+run(["pip", "install", "js2py"])
+run(["pip", "install", "html_telegraph_poster"])
 OWNER_ID = int(os.environ.get("OWNER_ID", 5045492908))
 
 # to store the channel ID where bot is authorized
